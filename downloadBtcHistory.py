@@ -17,7 +17,7 @@ import pandas as pd
 
 
 def hourly_price_historical(symbol, comparison_symbol, exchange='', limit='8000'):
-    url = 'https://min-api.cryptocompare.com/data/histoday?fsym={}&tsym={}&limit={}' \
+    url = 'https://min-api.cryptocompare.com/data/histohour?fsym={}&tsym={}&limit={}' \
         .format(symbol.upper(), comparison_symbol.upper(), limit)
     if exchange:
         url += '&e={}'.format(exchange)
