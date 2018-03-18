@@ -1,5 +1,6 @@
 import requests
 import datetime
+import os
 import pandas as pd
 
 
@@ -43,4 +44,4 @@ for exchange_name in exchanges:
     print(exchange_name)
 #    history = daily_price_historical('BTC', 'USD', exchange_name)
     history = hourly_price_historical('BTC', 'USD', exchange_name)
-    history.to_csv(exchange_name + '.csv')
+    history.to_csv(os.getcwd()+'/exchange_history/' + exchange_name + '.csv')
